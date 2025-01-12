@@ -14,5 +14,5 @@ jobs:
         server: ftp.curatedgallery.org
         username: live@curatedgallery.org
         password: ${{ secrets.FTP_PASSWORDLIVE }}
-        remote_dir: "/Build"
+        remote_dir: "DBPROD161571CuratedGallery/Build/"
 
