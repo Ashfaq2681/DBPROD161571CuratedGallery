@@ -1,2 +1,0 @@
-# DBPROD161571CuratedGallery
-DBPROD161571CuratedGallery
