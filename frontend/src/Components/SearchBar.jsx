@@ -36,8 +36,9 @@ function SearchBar() {
                 <path d="M12 15.0006L7.75732 10.758L9.17154 9.34375L12 12.1722L14.8284 9.34375L16.2426 10.758L12 15.0006Z"></path>
               </svg>
             </button>
+
             {isDropdownVisible && (
-              <div className="bg-white mt-2 text-gray-500 w-20 sm:w-36 text-center absolute transition-transform duration-300 transform scale-y-0 origin-top z-10 border border-gray-200 shadow-lg rounded-xl overflow-hidden">
+              <div className="bg-white mt-2 text-gray-500 w-20 sm:w-36 text-center absolute transition-transform duration-300 transform scale-y-100 origin-top z-10 border border-gray-200 shadow-lg rounded-xl overflow-hidden">
                 <ul>
                   <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
                     All
