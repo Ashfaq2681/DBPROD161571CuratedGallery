@@ -19,7 +19,7 @@ function SearchBar() {
         <div className="sm:my-3 my-3 border items-center border-[#4E4E55] rounded-full w-5/6 flex justify-between shadow-md">
           <div className="relative">
             <button
-              className="flex hover:opacity-80 bg-blue-700 text-sm sm:text-lg w-20 sm:w-36 justify-center items-center text-white font-normal rounded-full p-2"
+              className="flex hover:opacity-80 bg-[#4A16D8] text-sm sm:text-lg w-20 sm:w-36 justify-center items-center text-white font-normal rounded-full p-2"
               onClick={toggleDropdown}
             >
               Category
