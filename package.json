@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "scripts": {
+    "build": "npm --prefix ./frontend run build && mkdir ./Build 2> nul && xcopy /E /I ./frontend/dist ./Build",
+    "clean": "rmdir /S /Q ./Build"
+  }
+}
