@@ -1,13 +1,11 @@
-import { useState, lazy, Suspense, memo } from "react";
+import { useState, Suspense, memo } from "react";
 
-import Explore from "./Explore"
+import Explore from "./Explore";
 import { Link } from "react-router-dom";
 import { useLogout } from "../CustomHooks/useLogout";
 import { useAuthContext } from "../CustomHooks/useAuthContext";
 import { googleLogout } from "@react-oauth/google";
 import UserPanel from "./UserPanel";
-
-
 const Header = () => {
   const { logout } = useLogout();
   const { user } = useAuthContext();
@@ -62,7 +60,9 @@ const Header = () => {
               <p>{user.name || user.email}</p>
             </div>
             <div className="hidden md:flex">
-              <Suspense><UserPanel user={user} handleClick={handleClick} /></Suspense>
+              <Suspense>
+                <UserPanel user={user} handleClick={handleClick} />
+              </Suspense>
             </div>
           </div>
         ) : (
@@ -86,9 +86,20 @@ const Header = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
-            <img loading="lazy" src={mobileMenuOpen ? "./header/close.svg" : "./header/menuBar.png"} className="h-6 w-8" aria-hidden="true" />
+            <img
+              loading="lazy"
+              src={
+                mobileMenuOpen ? "./header/close.svg" : "./header/menuBar.png"
+              }
+              className="h-6 w-8"
+              aria-hidden="true"
+            />
           </button>
-          <div className={`${mobileMenuOpen ? "flex" : "hidden"} p-2 border border-gray-300 rounded-lg items-center flex-col absolute top-0 left-0 bg-white mt-[50px] gap-[10px] w-auto -ml-[100px]`}>
+          <div
+            className={`${
+              mobileMenuOpen ? "flex" : "hidden"
+            } p-2 border border-gray-300 rounded-lg items-center flex-col absolute top-0 left-0 bg-white mt-[50px] gap-[10px] w-auto -ml-[100px]`}
+          >
             <Explore />
             <Link to={`/blog`} className=" text-[#505153]">
               Discover

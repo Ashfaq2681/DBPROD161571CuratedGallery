@@ -15,8 +15,8 @@ function SearchBar() {
 
   return (
     <nav>
-      <div className="flex justify-center w-full shadow-md">
-        <div className="sm:my-3 my-3 border items-center border-[#4E4E55] rounded-full w-5/6 flex justify-between shadow-md">
+      <div className="flex justify-center w-full border-2">
+        <div className="sm:my-3 my-3 border items-center rounded-full w-5/6 flex justify-between  bg-slate-100">
           <div className="relative">
             <button
               className="flex hover:opacity-80 bg-[#4A16D8] text-sm sm:text-lg w-20 sm:w-36 justify-center items-center text-white font-normal rounded-full p-2"
@@ -38,7 +38,7 @@ function SearchBar() {
             </button>
 
             {isDropdownVisible && (
-              <div className="bg-white mt-2 text-gray-500 w-20 sm:w-36 text-center absolute transition-transform duration-300 transform scale-y-100 origin-top z-10 border border-gray-200 shadow-lg rounded-xl overflow-hidden">
+              <div className="bg-white mt-2 text-gray-500 w-20 sm:w-36 text-center absolute transition-duration-300 transform scale-y-100 origin-top z-10 border border-gray-200 shadow-lg rounded-xl overflow-hidden">
                 <ul>
                   <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
                     All
