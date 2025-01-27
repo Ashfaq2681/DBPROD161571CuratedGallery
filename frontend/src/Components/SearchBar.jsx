@@ -1,16 +1,41 @@
 import { useState } from "react";
-
+import axios from "axios";
 function SearchBar() {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
+  const [category, setSearchDropDown] = useState("All");
+  const [searchPlaceholder, setSearchPlaceholder] = useState("Search Image...");
+  // const [filterType, setFilterType] = useState("");
 
+  // const [results, setResults] = useState([]);
+  // const [error, setError] = useState("");
+  // const [loading, setLoading] = useState(false);
   const toggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
   };
 
-  const handleSearchSubmit = (e) => {
+  const handleCategorySelect = (category) => {
+    //  setFilterType(category);
+    setSearchPlaceholder(
+      `Search ${category.charAt(0).toUpperCase() + category.slice(1)}...`
+    );
+    setSearchDropDown(false);
+    setDropdownVisible(false);
+  };
+  const handleSearchSubmit = async (e) => {
     e.preventDefault();
     console.log("Search Term:", searchTerm);
+
+    try {
+      // Send a request to your backend with the search term and selected category
+      const response = await axios.get("/api/search", {
+        params: { query: searchTerm, category: category }, // Send both query and category
+      });
+      // setResults(response.data);
+      response.data; 
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -40,25 +65,46 @@ function SearchBar() {
             {isDropdownVisible && (
               <div className="bg-white mt-2 text-gray-500 w-20 sm:w-36 text-center absolute transition-duration-300 transform scale-y-100 origin-top z-10 border border-gray-200 shadow-lg rounded-xl overflow-hidden">
                 <ul>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("All")}
+                  >
                     All
                   </li>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("Psds")}
+                  >
                     Psds
                   </li>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("Photos")}
+                  >
                     Photos
                   </li>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("Mockups")}
+                  >
                     Mockups
                   </li>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("Social Media")}
+                  >
                     Social Media
                   </li>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("Pngs")}
+                  >
                     Pngs
                   </li>
-                  <li className="p-2 bg-white hover:bg-gray-100 cursor-pointer">
+                  <li
+                    className="p-2 bg-white hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleCategorySelect("Vectors")}
+                  >
                     Vectors
                   </li>
                 </ul>
@@ -72,7 +118,7 @@ function SearchBar() {
             <input
               type="text"
               name="image"
-              placeholder="Search Image..."
+              placeholder={searchPlaceholder}
               className="bg-transparent outline-none pl-4 w-[80%] p-1 placeholder:text-gray-400"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}

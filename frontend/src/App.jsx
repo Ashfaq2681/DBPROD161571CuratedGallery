@@ -10,6 +10,7 @@ import PremiumVectors from "./Components/Home/PremiumVectors";
 import PremiumIcons from "./Components/Home/PremiumIcons";
 import AnimationTemplates from "./Components/Home/AnimationTemplates";
 import SearchBar from "./Components/SearchBar";
+import Subscription from "./Components/Subscription";
 const Brand = lazy(() => import("./Components/Earn/Brand"));
 const Shop = lazy(() => import("./Components/Earn/Shop"));
 const Affiliate = lazy(() => import("./Components/Earn/Affiliate"));
@@ -687,14 +688,21 @@ const App = () => {
                 </>
               }
             />
-            <Route path="/premiumImages" element={<PremiumImages />}></Route>
-            <Route path="/premiumVectors" element={<PremiumVectors />}></Route>
-            <Route path="/premiumIcons" element={<PremiumIcons />}></Route>
+            {/* <Route path="/premiumImages" element={<PremiumImages />}></Route> */}
+            <Route path="/premium-images/:id" element={<PremiumImages />} />
+
             <Route
-              path="/animationTemplates"
+              path="/premium-vectors/:id"
+              element={<PremiumVectors />}
+            ></Route>
+            <Route
+              path="/animation-templates/:id"
               element={<AnimationTemplates />}
             ></Route>
+            <Route path="/premium-icons/:id" element={<PremiumIcons />}></Route>
+            <Route path="/subscription" element={<Subscription />}></Route>
           </Routes>
+
           <Footer />
           <div className="bottom-0 right-0 px-5 pb-5 z-auto float-end fixed overflow-hidden">
             <CustomChatBot />
