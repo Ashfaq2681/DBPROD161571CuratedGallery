@@ -1,0 +1,520 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+    background-color: rgb(29,29,28);
+}
+
+header {
+    align-items: center;
+    background-color: black;
+    padding: 15px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10 20px;
+    width: 100%;
+}
+
+.logo-div {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+ul li img {
+    width: 22px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.icons ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.icons ul li img {
+    width: 20px;
+    height: auto;
+}
+
+button {
+    background-color: rgb(255, 196, 80);
+    color: black;
+    font-weight: 700;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+}
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 450px;
+    color: white;
+    font-weight: 800;
+    background-color: rgb(48, 49, 47);
+    margin-top: 52px;
+    padding: 12px 24px;
+    display: flex;
+    gap: 12px;
+}
+
+.container>img {
+    width: 25px;
+    height: auto;
+}
+
+.message > p {
+    margin: 0 auto;
+    max-width: 900px;
+    color: rgb(250, 249, 247);
+    font-size: 48px;
+    font-weight: 800;
+    font-family: "Unbounded", serif;
+    margin-top: 42px;
+    padding: 12px;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 40px;
+    padding: 18px 36px;
+    width: 100%;
+    max-width: 1250px;
+    margin-top: 12px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.search {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: black;
+    background: transparent;
+    width: 100%;
+    font-size: 22px;
+}
+
+.searchbar img {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 34px;
+
+}
+
+.scroll-content {
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    background-color: rgb(13, 13, 12);
+    padding: 12px 18px;
+    width: fit-content;
+    position: relative;
+}
+
+.search-icon {
+    position: absolute;
+    left: 22px;
+    width: 20px;
+    height: 20px;
+}
+
+.content {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 600;
+    max-width: 150px;
+    padding: 12px 18px 12px 38px;
+    color: white;
+}
+
+.catalog {
+    display: flex;
+    gap: 52px;
+    margin-left: 26px;
+    margin-top: 62px;
+}
+
+.catalog span {
+    color: white;
+    font-weight: 400;
+}
+
+.pictures {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.car {
+    width: 90%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.car>img {
+    width: 1200px;
+    height: 800px;
+}
+
+.image-container {
+    display: grid;
+    gap: 1.5rem;
+    margin: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.image {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image-4 {
+    grid-column: span 2;
+
+}
+
+.blogpost {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.blogpost>h1 {
+    font-family: Unbounded, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: 48px;
+    
+}
+
+.blogpost>p {
+    margin-top: 12px;
+    color: white;
+
+}
+
+.btn {
+    margin-top: 12px;
+    border-radius: 8px;
+    padding: 12px 154px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgb(136, 133, 128);
+}
+
+.btn:hover {
+    border: 2px solid rgb(255, 196, 80);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    width: 80%;
+    height: 2px;
+    background-color: rgb(136, 133, 128);
+    margin: 20px 0;
+    margin: auto;
+    margin-top: 40px;
+}
+.heading > h1 {
+    font-family: "Unbounded", serif;
+    
+}
+.heading > h1{
+    color: white;
+    font-size: 43px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.grid-item {
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    background: black;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.heading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+    font-family: "Unbounded", serif;
+}
+
+.text-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    width: 80%;
+    margin: auto;
+    margin-top: 24px;
+
+}
+
+.text-item {
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    border: 2px solid rgb(136, 133, 128);
+}
+
+.text-item h2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.text-item p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    color: white;
+}
+
+.text-item:hover {
+    border: 2px solid rgb(255, 196, 80);
+}
+.divider > h1{
+    color: white;
+    font-family: "Unbounded", serif;
+    margin-left: 52px;
+    margin-top: 43px;
+}
+
+.line {
+    border: none;
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    margin: 20px 0;
+    margin: auto;
+}
+
+.container-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 44px;
+    background-color: white;
+}
+
+.text-content {
+    width: 50%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 12px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+.click {
+    background-color: transparent;
+    border: 2px solid rgb(136, 133, 128);
+    padding: 8px 18px;
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+.main-div {
+    text-align: center;
+    background-color: rgb(0,0,0);
+    height: 250px;
+}
+
+.main-div>h1 {
+    color: white;
+    font-family: "Unbounded", serif;
+    padding: 44px;
+    
+}
+
+.main-div p {
+    color: white;
+    font-size: 14px;
+}
+
+.main-div>button {
+    margin-top: 12px;
+
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    font-size: 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.footer-column ul li:hover {
+    text-decoration: underline;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 20px;
+}
