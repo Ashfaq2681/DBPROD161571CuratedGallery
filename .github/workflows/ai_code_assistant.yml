@@ -27,5 +27,5 @@ jobs:
       - name: Run AI Code Assistant
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
         run: python ai_code_assistant.py
