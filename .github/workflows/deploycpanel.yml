@@ -13,5 +13,5 @@ jobs:
       with:
         server: ftp.curatedgallery.org
         username: live@curatedgallery.org
-        password: ${{ secrets.FTP_PASSWORDLIVE }}
+        password: ${{ secrets.FTP_PASSWORDSERVER }}
         local-dir: Build/
