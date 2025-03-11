@@ -1,4 +1,4 @@
-    on: push
+on: push
 name:  Deploy website on push
 jobs:
   web-deploy:
@@ -14,4 +14,3 @@ jobs:
         server: ftp.curatedgallery.org
         username: live@curatedgallery.org
         password: ${{ secrets.FTP_PASSWORDSERVER }}
-        local-dir: Build/
